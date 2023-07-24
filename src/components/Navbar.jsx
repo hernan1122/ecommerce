@@ -8,7 +8,7 @@ function Navbar() {
   const active = ({isActive}) => isActive ? activeStyle : undefined
 
   return (
-    <nav className='w-full fixed top-0 flex justify-between items-center py-8 px-10 text-sm text-white font-light z-10'>
+    <nav className='w-full fixed top-0 flex justify-between items-center py-6 px-10 text-sm text-white font-light z-10 bg-black'>
       <ul className='flex items-center gap-3'>
         <li className='mr-2 font-bold text-base text-sky-500'>
           <NavLink to={'/'}>ECOMMERCE</NavLink>
