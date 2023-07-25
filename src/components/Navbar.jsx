@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ShoppingCartContext } from '../context/Context';
 import { NavLink } from 'react-router-dom';
 
 function Navbar() {
+  const {count} = useContext(ShoppingCartContext)
   const activeStyle = 'text-sky-500 font-medium'
-  /* const activeStyle = 'text-sky-500 underline underline-offset-4 decoration-sky-500/80' */
 
   const active = ({isActive}) => isActive ? activeStyle : undefined
 
@@ -46,7 +47,7 @@ function Navbar() {
           <NavLink to={'/signin'} className={active}>Sign In</NavLink>
         </li>
         <li>
-          🛒 7
+          🛒 {count}
         </li>
       </ul>
     </nav>
